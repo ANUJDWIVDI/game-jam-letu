@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chlaj0xpttppg"]
 
+[ext_resource type="Texture2D" uid="uid://c382c1cdxyway" path="res://Sprites/Pinball/melonseed1.png" id="1_2audy"]
 [ext_resource type="Script" path="res://bumpers.gd" id="1_qqisp"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e2451"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aw2rw"]
 radius = 0.7
@@ -11,21 +10,24 @@ radius = 0.7
 radius = 0.71
 
 [node name="Bumpers" type="Sprite2D"]
-rotation = 0.785398
-scale = Vector2(20, 20)
-texture = SubResource("PlaceholderTexture2D_e2451")
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_2audy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(1, 1)
 script = ExtResource("1_qqisp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-93, -325)
+scale = Vector2(700, 700)
 shape = SubResource("CircleShape2D_aw2rw")
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-91, -320)
+scale = Vector2(750, 750)
 shape = SubResource("CircleShape2D_cxc4y")
 
 [connection signal="body_exited" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_exited"]

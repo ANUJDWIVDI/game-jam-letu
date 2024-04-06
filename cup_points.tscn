@@ -1,8 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dp5v3tcueq3um"]
 
 [ext_resource type="Script" path="res://cup_points.gd" id="1_oddmk"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vdpoi"]
+[ext_resource type="Texture2D" uid="uid://cx3khgl2sjat4" path="res://Sprites/Pinball/flower.png" id="1_smngn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prxwp"]
 size = Vector2(1, 0.25)
@@ -14,31 +13,32 @@ size = Vector2(0.175, 0.861111)
 size = Vector2(0.7, 0.333333)
 
 [node name="cup_points" type="Sprite2D"]
-scale = Vector2(20, 9)
-texture = SubResource("PlaceholderTexture2D_vdpoi")
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_smngn")
 script = ExtResource("1_oddmk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2.38419e-08, 0.375)
-scale = Vector2(1, 1)
+position = Vector2(0, 320)
+scale = Vector2(1000, 1000)
 shape = SubResource("RectangleShape2D_prxwp")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.4125, -0.0833333)
-scale = Vector2(1, 1)
+position = Vector2(-440, -7.45058e-09)
+scale = Vector2(1000, 1000)
 shape = SubResource("RectangleShape2D_cgign")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.4, 0)
+position = Vector2(440, 0)
+scale = Vector2(1000, 1000)
 shape = SubResource("RectangleShape2D_cgign")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-3.57628e-08, 0.166667)
-scale = Vector2(1, 1)
+position = Vector2(0, 40)
+scale = Vector2(1000, 1000)
 shape = SubResource("RectangleShape2D_28l14")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
