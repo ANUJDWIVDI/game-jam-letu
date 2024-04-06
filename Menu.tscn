@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://4jbqngowrus4"]
+[gd_scene load_steps=14 format=3 uid="uid://4jbqngowrus4"]
 
 [ext_resource type="Script" path="res://Panel.gd" id="1_6frq1"]
 [ext_resource type="Texture2D" uid="uid://cp5sa3hmfbxpv" path="res://Sprites/Menus/title_background.png" id="1_luul5"]
 [ext_resource type="Texture2D" uid="uid://v1wgo8udtooy" path="res://Sprites/Menus/girl_title_3.png" id="2_r5vrp"]
 [ext_resource type="Texture2D" uid="uid://babydnv17wcb2" path="res://Sprites/Menus/girl_title_2.png" id="3_pl04t"]
 [ext_resource type="Texture2D" uid="uid://dg514uwosvdef" path="res://Sprites/Menus/girl_title_1.png" id="4_p0qva"]
+[ext_resource type="Texture2D" uid="uid://7vhbqycqhh1t" path="res://Sprites/Menus/title_title.png" id="6_4br6d"]
+[ext_resource type="StyleBox" uid="uid://b1opuo37o5w4n" path="res://new_style_box_flat.tres" id="6_iamdm"]
+[ext_resource type="AudioStream" uid="uid://bgotwllpinq3i" path="res://Sprites/music/Town_Hall_Child_Records_-_Tomodachi_Life_OST.mp3" id="8_r5koj"]
 
 [sub_resource type="Animation" id="Animation_hjah6"]
 length = 0.001
@@ -35,181 +38,211 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Options:position")
+tracks/2/path = NodePath("Panel/Play Ball:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(179, 378)]
+"values": [Vector2(697, 113)]
 }
-tracks/3/type = "value"
+tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Quit:position")
+tracks/3/path = NodePath("Panel/Play Ball:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(549, 487)]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(663.667, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
-tracks/4/type = "value"
+tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Volume Toggle:position")
+tracks/4/path = NodePath("Panel/Play Ball:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(31, 518)]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(140.667, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
-tracks/5/type = "value"
+tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Panel/Play Ball:position")
+tracks/5/path = NodePath("Panel/Rules:position:x")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(697, 113)]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(648.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Panel/Play Ball:position:x")
+tracks/6/path = NodePath("Panel/Rules:position:y")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(663.667, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(274.833, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/7/type = "bezier"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Panel/Play Ball:position:y")
+tracks/7/path = NodePath("Panel/Summon:position:x")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(140.667, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(144, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Panel/Rules:position:x")
+tracks/8/path = NodePath("Panel/Summon:position:y")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(648.5, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(195.667, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Panel/Rules:position:y")
+tracks/9/path = NodePath("Node2D/GirlTitle1:position:x")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(274.833, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-1211, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Panel/Quit:position:x")
+tracks/10/path = NodePath("Node2D/GirlTitle1:position:y")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(540.667, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-5, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/11/type = "bezier"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Panel/Quit:position:y")
+tracks/11/path = NodePath("Node2D/GirlTitle2:position:x")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(448.167, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-1248, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Panel/Summon:position:x")
+tracks/12/path = NodePath("Node2D/GirlTitle2:position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(144, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/13/type = "bezier"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Panel/Summon:position:y")
+tracks/13/path = NodePath("Node2D/GirlTitle3:position:x")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(195.667, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-1288, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/14/type = "bezier"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Panel/Options:position:x")
+tracks/14/path = NodePath("Node2D/GirlTitle3:position:y")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(227.167, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-7, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/15/type = "bezier"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Panel/Options:position:y")
+tracks/15/path = NodePath("TitleTitle:position:x")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(365, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1195, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Panel/Volume Toggle:position:x")
+tracks/16/path = NodePath("TitleTitle:position:y")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(118, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(807, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/17/type = "bezier"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Panel/Volume Toggle:position:y")
+tracks/17/path = NodePath("TitleTitle:modulate:r")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(481.5, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("TitleTitle:modulate:g")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("TitleTitle:modulate:b")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("TitleTitle:modulate:a")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -263,89 +296,23 @@ tracks/3/keys = {
 tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Quit:position:x")
+tracks/4/path = NodePath("Panel/Summon:position:x")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(540.667, -0.25, 0, 0.25, 0, 541, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(144, -0.25, 0, 0.25, 0, 155, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.8)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Panel/Quit:position:y")
+tracks/5/path = NodePath("Panel/Summon:position:y")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(448.167, -0.25, 0, 0.25, 0, 539, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Panel/Summon:position:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(144, -0.25, 0, 0.25, 0, 155, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Panel/Summon:position:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(195.667, -0.25, 0, 0.25, 0, 600, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Panel/Options:position:x")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(227.167, -0.25, 0, 0.25, 0, 221, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/9/type = "bezier"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Panel/Options:position:y")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(365, -0.25, 0, 0.25, 0, 606, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/10/type = "bezier"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("Panel/Volume Toggle:position:x")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(118, -0.25, 0, 0.25, 0, 110, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
-}
-tracks/11/type = "bezier"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("Panel/Volume Toggle:position:y")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(481.5, -0.25, 0, 0.25, 0, 607, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.8)
 }
 
@@ -367,58 +334,22 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Panel/Options:position")
+tracks/1/path = NodePath("Panel/Rules:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(179, 378), Vector2(468, 300)]
+"values": [Vector2(675, 273), Vector2(516, 284)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Quit:position")
+tracks/2/path = NodePath("Panel/Play Ball:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(549, 487), Vector2(499, 254)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Volume Toggle:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(31, 518), Vector2(553, 299)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Rules:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(675, 273), Vector2(516, 284)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Panel/Play Ball:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -427,6 +358,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_nru4x"]
 resource_name = "start_anim"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -437,7 +369,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-335, 88), Vector2(78, 177)]
+"values": [Vector2(-335, 88), Vector2(75, 276)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -449,55 +381,151 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1252, 449), Vector2(675, 273)]
+"values": [Vector2(1252, 449), Vector2(75, 375)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Panel/Options:position")
+tracks/2/path = NodePath("Panel/Play Ball:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(147, 793), Vector2(179, 378)]
+"values": [Vector2(861, -90), Vector2(78, 191)]
 }
-tracks/3/type = "value"
+tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Panel/Quit:position")
+tracks/3/path = NodePath("Node2D/GirlTitle1:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1012, 713), Vector2(549, 487)]
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1211, -0.25, 0, 0.7, 17, 0, -1.7, 94, 1.4, -13),
+"times": PackedFloat32Array(0, 1.5)
 }
-tracks/4/type = "value"
+tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Panel/Volume Toggle:position")
+tracks/4/path = NodePath("Node2D/GirlTitle1:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-347, 400), Vector2(31, 518)]
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-5, -0.25, 0, 0.25, 0, -5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
 }
-tracks/5/type = "value"
+tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Panel/Play Ball:position")
+tracks/5/path = NodePath("Node2D/GirlTitle2:position:x")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(861, -90), Vector2(697, 113)]
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1248, -0.25, 0, 1.1, -3, -3, -1.4, 52, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/GirlTitle2:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-4, -0.25, 0, 0.25, 0, -4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/GirlTitle3:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1288, -0.25, 0, 1.3, 32, -5, -0.4, 107, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/GirlTitle3:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-7, -0.25, 0, 0.25, 0, -7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.5)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("TitleTitle:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1195, -0.25, 0, 0.25, 0, 1195, -0.25, 0, 0.25, 0, 584, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.5)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TitleTitle:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(807, -0.25, 0, 0.25, 0, 807, -0.25, 0, 0.25, 0, 324, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 1.5)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TitleTitle:modulate:r")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TitleTitle:modulate:g")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TitleTitle:modulate:b")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("TitleTitle:modulate:a")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hcyf4"]
@@ -524,17 +552,19 @@ texture = ExtResource("1_luul5")
 position = Vector2(646, 328)
 
 [node name="GirlTitle3" type="Sprite2D" parent="Node2D"]
-position = Vector2(24, -1)
+position = Vector2(-1288, -7)
 texture = ExtResource("2_r5vrp")
 
 [node name="GirlTitle2" type="Sprite2D" parent="Node2D"]
+position = Vector2(-1248, -4)
 texture = ExtResource("3_pl04t")
 
 [node name="GirlTitle1" type="Sprite2D" parent="Node2D"]
-position = Vector2(-25, -1)
+position = Vector2(-1211, -5)
 texture = ExtResource("4_p0qva")
 
 [node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 2.0
 offset_right = 1150.0
@@ -545,8 +575,9 @@ script = ExtResource("1_6frq1")
 layout_mode = 0
 offset_left = 663.667
 offset_top = 140.667
-offset_right = 873.667
+offset_right = 873.673
 offset_bottom = 184.667
+theme_override_styles/normal = ExtResource("6_iamdm")
 text = "Play Ball"
 
 [node name="Summon" type="Button" parent="Panel"]
@@ -554,40 +585,18 @@ layout_mode = 0
 offset_left = 144.0
 offset_top = 195.667
 offset_right = 354.0
-offset_bottom = 239.667
+offset_bottom = 239.666
+theme_override_styles/normal = ExtResource("6_iamdm")
 text = "Summon"
 
 [node name="Rules" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 648.5
 offset_top = 274.833
-offset_right = 858.499
+offset_right = 858.501
 offset_bottom = 318.833
+theme_override_styles/normal = ExtResource("6_iamdm")
 text = "Glossary"
-
-[node name="Options" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 227.167
-offset_top = 365.0
-offset_right = 437.166
-offset_bottom = 409.0
-text = "Options"
-
-[node name="Quit" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 540.667
-offset_top = 448.167
-offset_right = 750.666
-offset_bottom = 562.167
-text = "Quit"
-
-[node name="Volume Toggle" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 118.0
-offset_top = 481.5
-offset_right = 188.0
-offset_bottom = 525.5
-text = "S-On"
 
 [node name="Profiles" type="Button" parent="Panel"]
 layout_mode = 0
@@ -595,6 +604,7 @@ offset_left = 118.0
 offset_top = 481.5
 offset_right = 188.0
 offset_bottom = 525.5
+theme_override_styles/normal = ExtResource("6_iamdm")
 text = "Profiles"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -602,11 +612,16 @@ libraries = {
 "": SubResource("AnimationLibrary_hcyf4")
 }
 
+[node name="TitleTitle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1195, 807)
+texture = ExtResource("6_4br6d")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_r5koj")
+
 [connection signal="pressed" from="Panel/Play Ball" to="Panel" method="_on_new_game_pressed"]
 [connection signal="pressed" from="Panel/Summon" to="Panel" method="_on_load_game_pressed"]
 [connection signal="pressed" from="Panel/Rules" to="Panel" method="_on_rules_pressed"]
-[connection signal="pressed" from="Panel/Options" to="Panel" method="_on_options_pressed"]
-[connection signal="pressed" from="Panel/Quit" to="Panel" method="_on_quit_pressed"]
-[connection signal="pressed" from="Panel/Volume Toggle" to="Panel" method="_on_volume_toggle_pressed"]
 [connection signal="pressed" from="Panel/Profiles" to="Panel" method="_on_volume_toggle_pressed"]
 [connection signal="pressed" from="Panel/Profiles" to="Panel" method="_on_profiles_pressed"]

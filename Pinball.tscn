@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=30 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="Script" path="res://Pinball.gd" id="1_afafi"]
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dp5v3tcueq3um" path="res://cup_points.tscn" id="7_26g4x"]
 [ext_resource type="PackedScene" uid="uid://cbpfvq63v63bc" path="res://wall.tscn" id="8_wwk88"]
 [ext_resource type="Texture2D" uid="uid://174pblxmeli2" path="res://Sprites/Menus/pincoin_sky.png" id="10_6eyfj"]
+[ext_resource type="AudioStream" uid="uid://cci13g1cm383p" path="res://Sprites/music/Food_Mart_-_Tomodachi_Life_OST.mp3" id="12_pm4m6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8xx"]
 size = Vector2(1000, 50)
@@ -757,6 +758,9 @@ offset_right = 173.0
 offset_bottom = 54.0
 text = "Score:
  "
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_pm4m6")
 
 [connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Camera2D/Area2D" to="Ball" method="_on_area_2d_body_exited"]

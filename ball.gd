@@ -6,6 +6,7 @@ var initial_position = Vector2(1113, 235)
 var counter = 0
 @export var CAMERA: Node2D
 var BALL
+var offset = -200
 
 
 func _ready():
@@ -15,10 +16,8 @@ func _ready():
 
 func _physics_process(delta):
 	#Ball going up screen
-	if position.y < -648 and position.y > -648-648:
-		CAMERA.position.y = -648-648
-	elif position.y < 0 and position.y > -648:
-		CAMERA.position.y = -648
+	if position.y < 0 :
+		CAMERA.position.y = position.y + offset
 	elif position.y > 0:
 		CAMERA.position.y = 0
 	if position.y > 800:

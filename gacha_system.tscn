@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bg8nxnkcbyt48"]
+[gd_scene load_steps=18 format=3 uid="uid://bg8nxnkcbyt48"]
 
 [ext_resource type="Script" path="res://GachaSystem.gd" id="1_yxtxl"]
 [ext_resource type="Texture2D" uid="uid://ias6hyjqm6ik" path="res://Sprites/Menus/gacha_background.png" id="2_bbrgc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpwm0hlgggnnb" path="res://Sprites/Gacha/people/girl_beach_banner.png" id="2_jqs5s"]
 [ext_resource type="Texture2D" uid="uid://b5b1wnrisv2d0" path="res://Sprites/Menus/applestar.png" id="3_h0whw"]
 [ext_resource type="Texture2D" uid="uid://dpdm53exs2ytr" path="res://Sprites/Gacha/cut-ins/eyes_beach.png" id="5_456v5"]
+[ext_resource type="AudioStream" uid="uid://6r3ldvptvlap" path="res://Sprites/music/Clothing_Shop_-_Tomodachi_Life_OST.mp3" id="7_gterr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hjxn"]
 bg_color = Color(0.14902, 0.14902, 0.14902, 1)
@@ -1100,18 +1101,22 @@ text = "Featured Characters!!"
 [node name="Label2" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "5* .001%
-Ringo"
+Pin"
 
 [node name="Label3" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "4* 40%
 Autold man
-Old Skibi"
+Old Skibi
+Meowster
+Senibi"
 
 [node name="Label4" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "3* 60%
-Old Man"
+Old Man
+Beach Man
+Sleep Man"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -1220,6 +1225,9 @@ texture = ExtResource("3_h0whw")
 position = Vector2(-53, 514)
 scale = Vector2(0.133583, 0.129917)
 texture = ExtResource("3_h0whw")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_gterr")
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SummonButton" to="." method="_on_summon_button_pressed"]

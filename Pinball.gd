@@ -13,9 +13,13 @@ func _ready():
 	$PincoinSky.visible = false
 	$CanvasLayer/Button.visible = true
 
+func play_music():
+	if $Music.playing == false:
+		$Music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	play_music()
 	pass
 
 func update_score():

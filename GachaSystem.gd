@@ -12,9 +12,13 @@ func _ready():
 	await animplay.animation_finished
 	$Points/Label.text = "Your points: " + str(StartVars.points)
 
+func play_music():
+	if $Music.playing == false:
+		$Music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	play_music()
 	pass
 
 

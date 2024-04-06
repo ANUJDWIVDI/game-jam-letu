@@ -8,8 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	play_music()
 	pass
-
+func play_music():
+	if $Music.playing == false:
+		$Music.play()
 
 func _on_button_1_pressed():
 	OS.shell_open("https://www.bing.com")

@@ -1,9 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvoh2ndijbf6c"]
+[gd_scene load_steps=15 format=3 uid="uid://bvoh2ndijbf6c"]
 
+[ext_resource type="Script" path="res://Selection.gd" id="1_ktm2q"]
 [ext_resource type="Texture2D" uid="uid://ias6hyjqm6ik" path="res://Sprites/Menus/gacha_background.png" id="1_ujcfx"]
 [ext_resource type="Texture2D" uid="uid://cuept0oq1qv1q" path="res://Sprites/Gacha/people/chibistarr.png" id="2_aceqq"]
 [ext_resource type="Texture2D" uid="uid://6pr3a7sgkvi2" path="res://Sprites/Gacha/busts/pinhead.png" id="3_f5up3"]
 [ext_resource type="Texture2D" uid="uid://b48esi8fqp5t6" path="res://Sprites/Gacha/busts/pinheadlarry.png" id="4_et071"]
+[ext_resource type="Texture2D" uid="uid://drpyp6ejprova" path="res://Sprites/Gacha/busts/old_man_chibi_bust.png" id="5_oako1"]
+[ext_resource type="Texture2D" uid="uid://c3bg2s8f6ax3u" path="res://Sprites/Gacha/busts/old_man_skibidihead.png" id="6_1mtui"]
+[ext_resource type="Texture2D" uid="uid://cslgf18vcv6y5" path="res://Sprites/Gacha/busts/old_man_kitty_bust.png" id="7_un8hi"]
+[ext_resource type="Texture2D" uid="uid://3vrqyp085pgr" path="res://Sprites/Gacha/busts/old_man_gundam_bust.png" id="8_4qb6q"]
+[ext_resource type="Texture2D" uid="uid://epbsd8gdnkpr" path="res://Sprites/Gacha/busts/old_man_default_bust.png" id="9_mrbjp"]
+[ext_resource type="Texture2D" uid="uid://bck7p0lm8m8w6" path="res://Sprites/Gacha/busts/old_man_beach_bust.png" id="10_gxcmc"]
+[ext_resource type="Texture2D" uid="uid://cvpj7wab6s6hw" path="res://Sprites/Gacha/busts/old_man_toired_bust.png" id="11_tp4w4"]
+[ext_resource type="AudioStream" uid="uid://d2uxglmc3jdas" path="res://Sprites/music/Office_Personality_Chart_-_Tomodachi_Life_OST.mp3" id="13_dtf55"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xnqw"]
 bg_color = Color(1, 1, 1, 1)
@@ -17,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ktm2q")
 
 [node name="GachaBackground" type="Sprite2D" parent="."]
 position = Vector2(571, 323.5)
@@ -36,7 +46,7 @@ offset_bottom = -290.0
 theme_override_font_sizes/font_size = 150
 text = "Choose your helper!!"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="ignore2" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 909.0
 offset_top = 446.0
@@ -44,70 +54,124 @@ offset_right = 1059.0
 offset_bottom = 601.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Pin" type="Sprite2D" parent="Panel"]
+[node name="Pin" type="Sprite2D" parent="ignore2"]
 modulate = Color(0.203922, 0.203922, 0.203922, 1)
 position = Vector2(77.9999, 77.9999)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_f5up3")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="ignore" type="Panel" parent="."]
 offset_left = 729.0
 offset_top = 448.0
 offset_right = 879.0
 offset_bottom = 603.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="PinSum" type="Sprite2D" parent="Panel2"]
+[node name="PinSum" type="Sprite2D" parent="ignore"]
 modulate = Color(0.176471, 0.176471, 0.176471, 1)
 position = Vector2(75, 83.5)
 scale = Vector2(0.570342, 0.503521)
 texture = ExtResource("4_et071")
 
-[node name="Panel3" type="Panel" parent="."]
+[node name="chibi" type="Panel" parent="."]
 offset_left = 411.0
 offset_top = 227.0
 offset_right = 561.0
 offset_bottom = 382.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel4" type="Panel" parent="."]
+[node name="OldManChibiBust" type="Sprite2D" parent="chibi"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+position = Vector2(79.9365, 78)
+scale = Vector2(0.619048, 0.619048)
+texture = ExtResource("5_oako1")
+
+[node name="skibidi" type="Panel" parent="."]
 offset_left = 593.0
 offset_top = 227.0
 offset_right = 743.0
 offset_bottom = 382.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel5" type="Panel" parent="."]
+[node name="OldManSkibidihead" type="Sprite2D" parent="skibidi"]
+modulate = Color(0.235294, 0.235294, 0.235294, 1)
+position = Vector2(72.5001, 72.6901)
+scale = Vector2(0.359155, 0.359155)
+texture = ExtResource("6_1mtui")
+
+[node name="gato" type="Panel" parent="."]
 offset_left = 783.0
 offset_top = 225.0
 offset_right = 933.0
 offset_bottom = 380.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel6" type="Panel" parent="."]
+[node name="OldManKittyBust" type="Sprite2D" parent="gato"]
+modulate = Color(0.239216, 0.239216, 0.239216, 1)
+position = Vector2(73.75, 80.2501)
+scale = Vector2(0.123766, 0.123766)
+texture = ExtResource("7_un8hi")
+
+[node name="tron" type="Panel" parent="."]
 offset_left = 975.0
 offset_top = 223.0
 offset_right = 1125.0
 offset_bottom = 378.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel7" type="Panel" parent="."]
+[node name="OldManGundamBust" type="Sprite2D" parent="tron"]
+modulate = Color(0.243137, 0.243137, 0.243137, 1)
+position = Vector2(75, 82)
+scale = Vector2(0.244224, 0.240924)
+texture = ExtResource("8_4qb6q")
+
+[node name="old" type="Panel" parent="."]
 offset_left = 41.0
 offset_top = 17.0
 offset_right = 191.0
 offset_bottom = 172.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel8" type="Panel" parent="."]
+[node name="OldManDefaultBust" type="Sprite2D" parent="old"]
+modulate = Color(0.247059, 0.247059, 0.247059, 1)
+position = Vector2(74.375, 80.625)
+scale = Vector2(0.707346, 0.707346)
+texture = ExtResource("9_mrbjp")
+
+[node name="beach" type="Panel" parent="."]
 offset_left = 264.0
 offset_top = 22.0
 offset_right = 414.0
 offset_bottom = 177.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
 
-[node name="Panel9" type="Panel" parent="."]
+[node name="OldManBeachBust" type="Sprite2D" parent="beach"]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+position = Vector2(74.625, 81.5922)
+scale = Vector2(0.577451, 0.577451)
+texture = ExtResource("10_gxcmc")
+
+[node name="sleep" type="Panel" parent="."]
 offset_left = 511.0
 offset_top = 23.0
 offset_right = 661.0
 offset_bottom = 178.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="OldManToiredBust" type="Sprite2D" parent="sleep"]
+modulate = Color(0.333333, 0.333333, 0.333333, 1)
+position = Vector2(68, 78)
+scale = Vector2(0.271853, 0.271853)
+texture = ExtResource("11_tp4w4")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 808.0
+offset_top = 63.0
+offset_right = 1061.0
+offset_bottom = 150.0
+text = "Return to Title"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_dtf55")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
