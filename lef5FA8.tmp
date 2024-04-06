@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://4kxn12snvix4"]
+
+[ext_resource type="Script" path="res://left_flap.gd" id="1_g4oec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqr0s"]
+
+[node name="left_flap" type="Sprite2D"]
+script = ExtResource("1_g4oec")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_xqr0s")
