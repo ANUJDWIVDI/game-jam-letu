@@ -3,15 +3,26 @@
 [sub_resource type="GDScript" id="GDScript_c71cy"]
 script/source = "extends RigidBody2D
 
+# Declare a variable to store the collision mask
+var panel_mask := 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# Set the collision mask to include panels
+	set_collision_mask_value(panel_mask, true)
 
+# Called when this body enters into contact with another
+func _on_RigidBody2D_body_entered(body: Node) -> void:
+	if body.is_in_group(\"panel\"):
+		# Handle collision with panel
+		# You can add your logic here
+		pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+# Called when this body exits contact with another
+func _on_RigidBody2D_body_exited(body: Node) -> void:
+	if body.is_in_group(\"panel\"):
+		# Handle exiting collision with panel
+		# You can add your logic here
+		pass
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c47v6"]
