@@ -25,18 +25,30 @@ func _on_button_pressed():
 
 
 func _on_summon_button_pressed():
-	# Prints a random integer between -10 and 10.
-	var sumcharacter = random.randi_range(0, 6)
-	StartVars.old_men[sumcharacter][2] += 1
-	$IntroText.text = StartVars.intro_text[sumcharacter][0]
-	$IntroText.visible = true
-	$Panel2.visible = true
-	$Character.texture = StartVars.old_men[sumcharacter][0]
-	if StartVars.intro_text[sumcharacter][1] == 4:
-		animplay.play("Stars_anim")
+	if StartVars.points >= 5:
+		StartVars.points -= 5
+		$Points/Label.text = "Your points: " + str(StartVars.points)
+		# Prints a random integer between -10 and 10.
+		var sumcharacter = random.randi_range(0, 6)
+		StartVars.old_men[sumcharacter][2] += 1
+		$IntroText.text = StartVars.intro_text[sumcharacter][0]
+		$IntroText.visible = true
+		$Panel2.visible = true
+		$Eyescutin.texture = StartVars.old_men[sumcharacter][1]
+		$Eyescutin.visible = true
+		animplay.play("eyes")
 		await animplay.animation_finished
-	elif StartVars.intro_text[sumcharacter][1] == 3:
-		animplay.play("lessStar_anim")
+		$Eyescutin.visible = false
+		$IntroText.visible = false
+		$Character.texture = StartVars.old_men[sumcharacter][0]
+		$Character.visible = true
+		animplay.play("Char_fadein")
 		await animplay.animation_finished
-	$Panel2.visible = false
-	$IntroText.visible = false
+		if StartVars.intro_text[sumcharacter][1] == 4:
+			animplay.play("Stars_anim")
+			await animplay.animation_finished
+		elif StartVars.intro_text[sumcharacter][1] == 3:
+			animplay.play("lessStar_anim")
+			await animplay.animation_finished
+		$Character.visible = false
+		$Panel2.visible = false

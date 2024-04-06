@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvoh2ndijbf6c"]
+
+[ext_resource type="Texture2D" uid="uid://ias6hyjqm6ik" path="res://Sprites/Menus/gacha_background.png" id="1_ujcfx"]
+[ext_resource type="Texture2D" uid="uid://cuept0oq1qv1q" path="res://Sprites/Gacha/people/chibistarr.png" id="2_aceqq"]
+[ext_resource type="Texture2D" uid="uid://6pr3a7sgkvi2" path="res://Sprites/Gacha/busts/pinhead.png" id="3_f5up3"]
+[ext_resource type="Texture2D" uid="uid://b48esi8fqp5t6" path="res://Sprites/Gacha/busts/pinheadlarry.png" id="4_et071"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xnqw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GachaBackground" type="Sprite2D" parent="."]
+position = Vector2(571, 323.5)
+scale = Vector2(1.03125, 1.04167)
+texture = ExtResource("1_ujcfx")
+
+[node name="Chibistarr" type="Sprite2D" parent="."]
+position = Vector2(159, 494)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_aceqq")
+
+[node name="Label" type="Label" parent="Chibistarr"]
+offset_left = 890.0
+offset_top = -560.0
+offset_right = 2382.0
+offset_bottom = -290.0
+theme_override_font_sizes/font_size = 150
+text = "Choose your helper!!"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 909.0
+offset_top = 446.0
+offset_right = 1059.0
+offset_bottom = 601.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Pin" type="Sprite2D" parent="Panel"]
+modulate = Color(0.203922, 0.203922, 0.203922, 1)
+position = Vector2(77.9999, 77.9999)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_f5up3")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 729.0
+offset_top = 448.0
+offset_right = 879.0
+offset_bottom = 603.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="PinSum" type="Sprite2D" parent="Panel2"]
+modulate = Color(0.176471, 0.176471, 0.176471, 1)
+position = Vector2(75, 83.5)
+scale = Vector2(0.570342, 0.503521)
+texture = ExtResource("4_et071")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 411.0
+offset_top = 227.0
+offset_right = 561.0
+offset_bottom = 382.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 593.0
+offset_top = 227.0
+offset_right = 743.0
+offset_bottom = 382.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 783.0
+offset_top = 225.0
+offset_right = 933.0
+offset_bottom = 380.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 975.0
+offset_top = 223.0
+offset_right = 1125.0
+offset_bottom = 378.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel7" type="Panel" parent="."]
+offset_left = 41.0
+offset_top = 17.0
+offset_right = 191.0
+offset_bottom = 172.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel8" type="Panel" parent="."]
+offset_left = 264.0
+offset_top = 22.0
+offset_right = 414.0
+offset_bottom = 177.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")
+
+[node name="Panel9" type="Panel" parent="."]
+offset_left = 511.0
+offset_top = 23.0
+offset_right = 661.0
+offset_bottom = 178.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8xnqw")

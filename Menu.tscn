@@ -1,6 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://4jbqngowrus4"]
+[gd_scene load_steps=11 format=3 uid="uid://4jbqngowrus4"]
 
 [ext_resource type="Script" path="res://Panel.gd" id="1_6frq1"]
+[ext_resource type="Texture2D" uid="uid://cp5sa3hmfbxpv" path="res://Sprites/Menus/title_background.png" id="1_luul5"]
+[ext_resource type="Texture2D" uid="uid://v1wgo8udtooy" path="res://Sprites/Menus/girl_title_3.png" id="2_r5vrp"]
+[ext_resource type="Texture2D" uid="uid://babydnv17wcb2" path="res://Sprites/Menus/girl_title_2.png" id="3_pl04t"]
+[ext_resource type="Texture2D" uid="uid://dg514uwosvdef" path="res://Sprites/Menus/girl_title_1.png" id="4_p0qva"]
 
 [sub_resource type="Animation" id="Animation_hjah6"]
 length = 0.001
@@ -511,6 +515,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TitleBackground" type="Sprite2D" parent="."]
+position = Vector2(577, 320)
+texture = ExtResource("1_luul5")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(646, 328)
+
+[node name="GirlTitle3" type="Sprite2D" parent="Node2D"]
+position = Vector2(24, -1)
+texture = ExtResource("2_r5vrp")
+
+[node name="GirlTitle2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("3_pl04t")
+
+[node name="GirlTitle1" type="Sprite2D" parent="Node2D"]
+position = Vector2(-25, -1)
+texture = ExtResource("4_p0qva")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bg8nxnkcbyt48"]
+[gd_scene load_steps=17 format=3 uid="uid://bg8nxnkcbyt48"]
 
 [ext_resource type="Script" path="res://GachaSystem.gd" id="1_yxtxl"]
+[ext_resource type="Texture2D" uid="uid://ias6hyjqm6ik" path="res://Sprites/Menus/gacha_background.png" id="2_bbrgc"]
 [ext_resource type="Texture2D" uid="uid://dd7f08gm2p53p" path="res://Sprites/Gacha/people/old_man_beach.png" id="2_jeul1"]
+[ext_resource type="Texture2D" uid="uid://cpwm0hlgggnnb" path="res://Sprites/Gacha/people/girl_beach_banner.png" id="2_jqs5s"]
 [ext_resource type="Texture2D" uid="uid://b5b1wnrisv2d0" path="res://Sprites/Menus/applestar.png" id="3_h0whw"]
+[ext_resource type="Texture2D" uid="uid://dpdm53exs2ytr" path="res://Sprites/Gacha/cut-ins/eyes_beach.png" id="5_456v5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hjxn"]
 bg_color = Color(0.14902, 0.14902, 0.14902, 1)
@@ -429,6 +432,72 @@ tracks/37/loop_wrap = true
 tracks/37/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(933, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/38/type = "bezier"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Eyescutin:modulate:r")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/39/type = "bezier"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Eyescutin:modulate:g")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/40/type = "bezier"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Eyescutin:modulate:b")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/41/type = "bezier"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Eyescutin:modulate:a")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/42/type = "bezier"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Character:position:x")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(712, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/43/type = "bezier"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Character:position:y")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(254, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -901,10 +970,85 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.5)
 }
 
+[sub_resource type="Animation" id="Animation_jlw07"]
+resource_name = "eyes"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Eyescutin:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Eyescutin:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Eyescutin:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Eyescutin:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_bcak4"]
+resource_name = "Char_fadein"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(692, -0.25, 0, 0.25, 0, 712, -0.25, 0, 0.25, 0, 712, -0.25, 0, 0.25, 0, 712, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.2, 1.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-309, -0.25, 0, 0.25, 0, 254, -0.25, 0, 0.25, 0, 219, -0.25, 0, 0.25, 0, 254, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.2, 1.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u706l"]
 _data = {
+"Char_fadein": SubResource("Animation_bcak4"),
 "RESET": SubResource("Animation_0y7g8"),
 "Stars_anim": SubResource("Animation_d4yk5"),
+"eyes": SubResource("Animation_jlw07"),
 "leave_anim": SubResource("Animation_iipnq"),
 "lessStar_anim": SubResource("Animation_8x5m5"),
 "start_anim": SubResource("Animation_eo1vs")
@@ -921,6 +1065,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yxtxl")
+
+[node name="GachaBackground" type="Sprite2D" parent="."]
+position = Vector2(578, 319)
+scale = Vector2(1.01736, 1.01235)
+texture = ExtResource("2_bbrgc")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -946,7 +1095,7 @@ offset_bottom = 414.0
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Possible Fortunes!!"
+text = "Featured Characters!!"
 
 [node name="Label2" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -970,6 +1119,8 @@ offset_left = 347.0
 offset_top = 49.0
 offset_right = 1108.0
 offset_bottom = 604.0
+texture = ExtResource("2_jqs5s")
+expand_mode = 2
 
 [node name="Points" type="Panel" parent="."]
 layout_mode = 0
@@ -1006,9 +1157,18 @@ offset_bottom = 657.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_np1pa")
 
 [node name="Character" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(712, 254)
 scale = Vector2(0.368787, 0.368787)
 texture = ExtResource("2_jeul1")
+
+[node name="Eyescutin" type="TextureRect" parent="."]
+visible = false
+offset_left = -42.0
+offset_top = 166.0
+offset_right = 1164.0
+offset_bottom = 287.0
+texture = ExtResource("5_456v5")
 
 [node name="IntroText" type="Label" parent="."]
 visible = false

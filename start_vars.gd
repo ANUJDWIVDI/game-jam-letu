@@ -2,14 +2,16 @@ extends Node
 
 var points = 0
 
+var current_old_man = null
+
 var old_men = [
-[load("res://Sprites/Gacha/people/old_man_beach.png"),load("res://Sprites/Gacha/people/old_man_beach.png"),0], #0
-[load("res://Sprites/Gacha/people/old_man_chibi.png"),load("res://Sprites/Gacha/people/old_man_chibi.png"),0], #1
-[load("res://Sprites/Gacha/people/old_man_default.png"),load("res://Sprites/Gacha/people/old_man_default.png"),0], #2
-[load("res://Sprites/Gacha/people/old_man_gundam.png"),load("res://Sprites/Gacha/people/old_man_gundam.png"),0], #3
-[load("res://Sprites/Gacha/people/old_man_kitty.png"),load("res://Sprites/Gacha/people/old_man_kitty.png"),0], #4
-[load("res://Sprites/Gacha/people/old_man_skibidi.png"),load("res://Sprites/Gacha/people/old_man_skibidi.png"),0], #5
-[load("res://Sprites/Gacha/people/old_man_toired.png"),load("res://Sprites/Gacha/people/old_man_toired.png"),0] #6
+[load("res://Sprites/Gacha/people/old_man_beach.png"),load("res://Sprites/Gacha/cut-ins/eyes_beach.png"),0], #0
+[load("res://Sprites/Gacha/people/old_man_chibi.png"),load("res://Sprites/Gacha/cut-ins/eyes_chibi.png"),0], #1
+[load("res://Sprites/Gacha/people/old_man_default.png"),load("res://Sprites/Gacha/cut-ins/eyes_og.png"),0], #2
+[load("res://Sprites/Gacha/people/old_man_gundam.png"),load("res://Sprites/Gacha/cut-ins/eyes_gundam.png"),0], #3
+[load("res://Sprites/Gacha/people/old_man_kitty.png"),load("res://Sprites/Gacha/cut-ins/eyes_kitty.png"),0], #4
+[load("res://Sprites/Gacha/people/old_man_skibidi.png"),load("res://Sprites/Gacha/cut-ins/eyes_skibidi.png"),0], #5
+[load("res://Sprites/Gacha/people/old_man_toired.png"),load("res://Sprites/Gacha/cut-ins/eyes_eepy.png"),0] #6
 ]
 
 var intro_text = [
