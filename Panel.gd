@@ -2,6 +2,7 @@ extends Panel
 
 var packed_scene = "res://Pinball.tscn"
 var gacha_scene = "res://gacha_system.tscn"
+var profile_scene = "res://Profiles.tscn"
 @onready var animplay = $"../AnimationPlayer"
 
 
@@ -36,4 +37,9 @@ func _on_quit_pressed():
 
 
 func _on_volume_toggle_pressed():
+	pass # Replace with function body.
+
+
+func _on_profiles_pressed():
+	get_tree().change_scene_to_file(profile_scene)
 	pass # Replace with function body.

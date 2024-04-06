@@ -567,6 +567,14 @@ offset_right = 188.0
 offset_bottom = 525.5
 text = "S-On"
 
+[node name="Profiles" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 481.5
+offset_right = 188.0
+offset_bottom = 525.5
+text = "Profiles"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_hcyf4")
@@ -578,3 +586,5 @@ libraries = {
 [connection signal="pressed" from="Panel/Options" to="Panel" method="_on_options_pressed"]
 [connection signal="pressed" from="Panel/Quit" to="Panel" method="_on_quit_pressed"]
 [connection signal="pressed" from="Panel/Volume Toggle" to="Panel" method="_on_volume_toggle_pressed"]
+[connection signal="pressed" from="Panel/Profiles" to="Panel" method="_on_volume_toggle_pressed"]
+[connection signal="pressed" from="Panel/Profiles" to="Panel" method="_on_profiles_pressed"]
