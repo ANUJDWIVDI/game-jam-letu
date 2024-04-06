@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg8nxnkcbyt48"]
+[gd_scene load_steps=12 format=3 uid="uid://bg8nxnkcbyt48"]
 
 [ext_resource type="Script" path="res://GachaSystem.gd" id="1_yxtxl"]
 [ext_resource type="Texture2D" uid="uid://dd7f08gm2p53p" path="res://Sprites/Gacha/people/old_man_beach.png" id="2_jeul1"]
@@ -864,11 +864,49 @@ tracks/20/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.5)
 }
 
+[sub_resource type="Animation" id="Animation_8x5m5"]
+resource_name = "lessStar_anim"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stars/Applestar:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-158, -0.25, 0, 0.25, 0, 301, -0.25, 0, 0.25, 0, 898, -0.25, 0, 0.25, 0, 1318, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stars/Applestar:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(720, -0.25, 0, 0.25, 0, 407, -0.25, 0, 0.25, 0, 178, -0.25, 0, 0.25, 0, -64.0001, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stars/Applestar:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -1.41546, -0.25, 0, 0.25, 0, -3.53953, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u706l"]
 _data = {
 "RESET": SubResource("Animation_0y7g8"),
 "Stars_anim": SubResource("Animation_d4yk5"),
 "leave_anim": SubResource("Animation_iipnq"),
+"lessStar_anim": SubResource("Animation_8x5m5"),
 "start_anim": SubResource("Animation_eo1vs")
 }
 
@@ -913,7 +951,7 @@ text = "Possible Fortunes!!"
 [node name="Label2" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "5* .001%
-Girl"
+Ringo"
 
 [node name="Label3" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -971,6 +1009,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_np1pa")
 position = Vector2(712, 254)
 scale = Vector2(0.368787, 0.368787)
 texture = ExtResource("2_jeul1")
+
+[node name="IntroText" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 165.0
+offset_top = 189.0
+offset_right = 977.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 100
+text = "Hello"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Stars" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0.521569)
