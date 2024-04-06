@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=28 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="Script" path="res://Pinball.gd" id="1_afafi"]
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
 [ext_resource type="PackedScene" uid="uid://chlaj0xpttppg" path="res://bumpers.tscn" id="6_fucih"]
 [ext_resource type="PackedScene" uid="uid://dp5v3tcueq3um" path="res://cup_points.tscn" id="7_26g4x"]
+[ext_resource type="PackedScene" uid="uid://cbpfvq63v63bc" path="res://wall.tscn" id="8_wwk88"]
 [ext_resource type="Texture2D" uid="uid://174pblxmeli2" path="res://Sprites/Menus/pincoin_sky.png" id="10_6eyfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8xx"]
@@ -34,6 +35,9 @@ size = Vector2(100, 50)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qaeic"]
 radius = 50.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdb3u"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_lwjau"]
 resource_name = "start_anim"
@@ -173,12 +177,209 @@ tracks/5/keys = {
 "points": PackedFloat32Array(555, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:r")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:g")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:b")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("OutroPanel:size:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(594, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("OutroPanel:size:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(596, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("OutroPanel:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-588, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("OutroPanel:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_oi40y"]
+resource_name = "leave_anim"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OutroPanel:theme_override_styles/panel:bg_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OutroPanel:size:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(594, -0.25, 0, 0.25, 0, 1768, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OutroPanel:size:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(596, -0.25, 0, 0.25, 0, 846, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OutroPanel:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-588, -0.25, 0, 0.25, 0, -382, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("OutroPanel:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0, -41, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4kqpq"]
 _data = {
 "RESET": SubResource("Animation_t8xe2"),
+"leave_anim": SubResource("Animation_oi40y"),
 "start_anim": SubResource("Animation_lwjau")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p057"]
+bg_color = Color(0.788235, 0, 0.00392157, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.972549, 0.972549, 0.972549, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_athly"]
+bg_color = Color(0.945098, 0.305882, 0.745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r7xo"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_afafi")
@@ -223,10 +424,6 @@ position = Vector2(545, 755)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_wa8xx")
 
-[node name="cup_points" parent="." instance=ExtResource("7_26g4x")]
-position = Vector2(43, 17)
-rotation = 0.525466
-
 [node name="right_flap2" parent="." instance=ExtResource("4_76wbq")]
 position = Vector2(932, -557)
 rotation = 0.958614
@@ -254,6 +451,61 @@ anchor_mode = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
 position = Vector2(570.5, 323.5)
 shape = SubResource("RectangleShape2D_uct1c")
+
+[node name="pointholder" type="Node2D" parent="."]
+
+[node name="cup_points" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(43, 17)
+rotation = 0.525466
+
+[node name="cup_points2" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(154, 235)
+
+[node name="cup_points3" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(824, 290)
+
+[node name="cup_points4" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(183, -328)
+
+[node name="cup_points5" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(960, -269)
+
+[node name="cup_points6" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(104, -722)
+
+[node name="cup_points7" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(954, -740)
+
+[node name="cup_points8" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(460, -803)
+
+[node name="cup_points9" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(1027, -948)
+
+[node name="cup_points10" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(271, -984)
+
+[node name="cup_points11" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(43, -296)
+rotation = 0.525466
+
+[node name="cup_points12" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(42, -960)
+rotation = 0.525466
+
+[node name="cup_points13" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(1113, -693)
+rotation = -0.973864
+
+[node name="cup_points14" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(1109, -1035)
+rotation = -0.973864
+
+[node name="cup_points15" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(550, -274)
+
+[node name="cup_points16" parent="pointholder" instance=ExtResource("7_26g4x")]
+position = Vector2(688, 120)
 
 [node name="Wallholder" type="Node2D" parent="."]
 
@@ -409,6 +661,38 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wallholder/Wall6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
+[node name="Wall16" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(117.711, 411.82)
+rotation = -0.804053
+scale = Vector2(0.0964235, 0.619324)
+
+[node name="Wall17" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(959, 448)
+rotation = 0.948491
+scale = Vector2(0.0964235, 0.619324)
+
+[node name="Wall18" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(1233.79, -69.0089)
+rotation = -0.804053
+scale = Vector2(0.101986, 0.619324)
+
+[node name="Wall7" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(-27.5, -604)
+scale = Vector2(0.095, 2.276)
+
+[node name="Wall15" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(1179, -770)
+scale = Vector2(0.095, 2.276)
+
+[node name="Wall19" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(1254, -696)
+rotation = 1.06707
+scale = Vector2(0.0964235, 0.619324)
+
+[node name="Wall20" parent="Wallholder" instance=ExtResource("8_wwk88")]
+position = Vector2(1042, 1101)
+scale = Vector2(0.095, 2.02467)
+
 [node name="BumberHolder" type="Node2D" parent="."]
 
 [node name="Bumpers" parent="BumberHolder" instance=ExtResource("6_fucih")]
@@ -467,10 +751,32 @@ position = Vector2(190, 555)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_6eyfj")
 
+[node name="OutroPanel" type="Panel" parent="."]
+visible = false
+offset_left = -588.0
+offset_top = 223.0
+offset_right = 6.0
+offset_bottom = 819.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wdb3u")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_4kqpq")
 }
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 1027.0
+offset_top = 556.0
+offset_right = 1121.0
+offset_bottom = 620.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1p057")
+theme_override_styles/hover = SubResource("StyleBoxFlat_athly")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8r7xo")
+text = "STOP"
+
 [connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Camera2D/Area2D" to="Ball" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

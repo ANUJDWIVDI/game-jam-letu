@@ -4,7 +4,7 @@ extends Sprite2D
 signal ball_in_cup
 
 # Declare a variable to store the points
-var points = 0
+var points = StartVars.points
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,8 +17,6 @@ func _process(delta):
 # Function to be called when the ball interacts with the cup
 func on_ball_in_cup():
 	points += 1
-	print("Points: ", points)
-	emit_signal("ball_in_cup")
 
 
 func _on_area_2d_body_entered(body):

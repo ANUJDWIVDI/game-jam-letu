@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbpfvq63v63bc"]
+
+[ext_resource type="Texture2D" uid="uid://birr1av20v454" path="res://Sprites/Pinball/melonsquare.png" id="1_1dstg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83vql"]
+size = Vector2(1160, 1080)
+
+[node name="Wall" type="Sprite2D"]
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_1dstg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(20, 20.0001)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_83vql")

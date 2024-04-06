@@ -14,31 +14,34 @@ func _ready():
 	self.physics_material_override = physics_material
 
 func _physics_process(delta):
+	#Ball going up screen
+	if position.y < -648 and position.y > -648-648:
+		CAMERA.position.y = -648-648
+	elif position.y < 0 and position.y > -648:
+		CAMERA.position.y = -648
+	elif position.y > 0:
+		CAMERA.position.y = 0
 	if position.y > 800:
 		reset_ball()
 		
 		
 func reset_ball():
 	CAMERA.position.y = 0
+	linear_velocity = Vector2(0,0)
 	apply_impulse(Vector2.ZERO, Vector2.ZERO)
 	PhysicsServer2D.body_set_state(
 	get_rid(),
 	PhysicsServer2D.BODY_STATE_TRANSFORM,
 	Transform2D.IDENTITY.translated(initial_position)
 )
-
+var hi = '''
 func _on_area_2d_body_exited(body):
 	if body == self:
 		#Ball going up screen
-		if position.y < -648:
-			CAMERA.position.y -= 648
-		elif position.y < 0:
-			CAMERA.position.y -= 648
-			
-			
-		#ball moves downward
-		if position.y > 648:
-			pass
+		if position.y < -648 and position.y > -648-648:
+			CAMERA.position.y = -648-648
+		elif position.y < 0 and position.y > -648:
+			CAMERA.position.y = -648
 		elif position.y > 0:
-			CAMERA.position.y += 648
-	pass # Replace with function body.
+			CAMERA.position.y = 0
+	pass # Replace with function body.'''
