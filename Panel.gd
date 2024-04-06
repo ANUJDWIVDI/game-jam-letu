@@ -35,25 +35,27 @@ func _on_button_pressed(index):
 
 # Start a new game
 
-func _on_new_game_pressed():
-	pass # Replace with function body.
 	
+# Start a new game
+func _on_new_game_pressed():
+    print("New game started") # Replace with your own logic
 
+# Load a game
 func _on_load_game_pressed():
-	pass # Replace with function body.
+    print("Game loaded") # Replace with your own logic
 
-
+# Show rules
 func _on_rules_pressed():
-	pass # Replace with function body.
+    print("Rules shown") # Replace with your own logic
 
-
+# Show options
 func _on_options_pressed():
-	pass # Replace with function body.
+    print("Options shown") # Replace with your own logic
 
-
+# Quit the game
 func _on_quit_pressed():
-	pass # Replace with function body.
+    get_tree().quit()
 
-
+# Toggle volume
 func _on_volume_toggle_pressed():
-	pass # Replace with function body.
+    print("Volume toggled") # Replace with your own logic
