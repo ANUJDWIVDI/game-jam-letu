@@ -5,6 +5,7 @@ var rest_length = 0.0
 var press_start_time = 0.0
 
 func _ready():
+<<<<<<< Updated upstream
 	self.rest_length = rest_length
 
 func _process(delta):
@@ -22,3 +23,22 @@ func calculate_spring_force(press_duration):
 		return spring_strength * 1.0
 	else:
 		return spring_strength * 1.5
+=======
+	self.rest_length = rest_length
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_select"):
+		press_start_time = OS.get_ticks_msec()
+	elif Input.is_action_just_released("ui_select"):
+		var press_duration = (OS.get_ticks_msec() - press_start_time) / 1000.0
+		var spring_force = calculate_spring_force(press_duration)
+		self.get_node("RigidBody2D").apply_central_impulse(Vector2(0, -spring_force * delta))
+
+func calculate_spring_force(press_duration):
+	if press_duration < 2.0:
+		return spring_strength * 0.5
+	elif press_duration < 4.0:
+		return spring_strength * 1.0
+	else:
+		return spring_strength * 1.5
+>>>>>>> Stashed changes

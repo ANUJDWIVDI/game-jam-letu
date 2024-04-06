@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://jev60wse2gus"]
+
+[ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
+size = Vector2(100, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmi7m"]
+size = Vector2(100, 600)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_dlhl5")]
+position = Vector2(241, 148)
+
+[node name="Wall2" type="Sprite2D" parent="."]
+position = Vector2(1144, 293)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(38, 294)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall3" type="Sprite2D" parent="."]
+position = Vector2(877, 501)
+rotation = 0.944086
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall4" type="Sprite2D" parent="."]
+position = Vector2(241, 457)
+rotation = 2.31254
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Spring" type="DampedSpringJoint2D" parent="."]
+position = Vector2(100, 500)
