@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://jev60wse2gus"]
+[gd_scene load_steps=11 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
 [ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
 [ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
-[ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
+[ext_resource type="PackedScene" path="res://Obstacle.tscn" id="5_0aim7"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
