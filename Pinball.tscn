@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://jev60wse2gus"]
+[gd_scene load_steps=13 format=3 uid="uid://jev60wse2gus"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
 [ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
 [ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
 [ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
+[ext_resource type="PackedScene" uid="uid://bpa8dgo5qsvbc" path="res://bumpers.tscn" id="6_2v2a3"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
@@ -128,15 +129,15 @@ position = Vector2(321, 159)
 scale = Vector2(3.33125, 1.0125)
 
 [node name="Sprite2D3" parent="." instance=ExtResource("5_0aim7")]
-position = Vector2(806, 157)
+position = Vector2(-251.75, 252.5)
 scale = Vector2(3.33125, 1.0125)
 
 [node name="Sprite2D4" parent="." instance=ExtResource("5_0aim7")]
-position = Vector2(555, 416.25)
+position = Vector2(-502.75, 511.75)
 scale = Vector2(3.33125, 3.06875)
 
 [node name="Sprite2D5" parent="." instance=ExtResource("5_0aim7")]
-position = Vector2(563, -19)
+position = Vector2(-494.75, 76.5)
 scale = Vector2(3.33125, 1.0125)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -147,6 +148,10 @@ anchor_mode = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
 position = Vector2(577.5, 323)
 shape = SubResource("RectangleShape2D_uct1c")
+
+[node name="Bumpers" parent="." instance=ExtResource("6_2v2a3")]
+position = Vector2(562, 199)
+scale = Vector2(340.5, 204.5)
 
 [connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Camera2D/Area2D" to="Ball" method="_on_area_2d_body_exited"]

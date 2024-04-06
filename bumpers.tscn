@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpa8dgo5qsvbc"]
+
+[ext_resource type="Script" path="res://bumpers.gd" id="1_qqisp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e2451"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw2rw"]
+radius = 0.845813
+
+[node name="Bumpers" type="Sprite2D"]
+position = Vector2(0.75, 12)
+scale = Vector2(25, 20)
+texture = SubResource("PlaceholderTexture2D_e2451")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("1_qqisp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_aw2rw")
