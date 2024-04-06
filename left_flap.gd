@@ -1,16 +1,17 @@
 extends Node2D
 
 # Define the rotation angles
-var start_angle = deg_to_rad(270)
+var start_angle = deg_to_rad(120)
 var end_angle = deg_to_rad(35)
 
 # Define the rotation speed
-var rotation_speed = 2.0
+var rotation_speed = 15.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Set the initial rotation
-	rotation = start_angle
+	#rotation = start_angle
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://4kxn12snvix4"]
+[gd_scene load_steps=4 format=3 uid="uid://4kxn12snvix4"]
 
 [ext_resource type="Script" path="res://left_flap.gd" id="1_g4oec"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u0t33"]
+size = Vector2(20, 100)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqr0s"]
+size = Vector2(20, 100)
 
 [node name="left_flap" type="Sprite2D"]
+texture = SubResource("PlaceholderTexture2D_u0t33")
 script = ExtResource("1_g4oec")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

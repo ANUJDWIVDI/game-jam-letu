@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=8 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
+[ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
@@ -88,3 +89,7 @@ texture = SubResource("PlaceholderTexture2D_oq142")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wallish/StaticBody2D"]
 shape = SubResource("CircleShape2D_qaeic")
+
+[node name="left_flap" parent="." instance=ExtResource("3_efef1")]
+position = Vector2(482, 628)
+rotation = -0.874705
