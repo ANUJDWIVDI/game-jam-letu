@@ -65,7 +65,7 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 shape = SubResource("RectangleShape2D_vmi7m")
 
 [node name="Wall6" type="Sprite2D" parent="."]
-position = Vector2(500, 307)
+position = Vector2(722, 216)
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
