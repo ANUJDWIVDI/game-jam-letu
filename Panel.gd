@@ -1,14 +1,25 @@
 extends Panel
 
 var packed_scene = "res://Pinball.tscn"
+var gacha_scene = "res://gacha_system.tscn"
+@onready var animplay = $"../AnimationPlayer"
 
+
+func _ready():
+	animplay.play("start_anim")
+	await animplay.animation_finished
 
 func _on_new_game_pressed():
+	animplay.play("play_anim")
+	await animplay.animation_finished
 	get_tree().change_scene_to_file(packed_scene)
 	pass # Replace with function body.
 
 
 func _on_load_game_pressed():
+	animplay.play("gacha_anim")
+	await animplay.animation_finished
+	get_tree().change_scene_to_file(gacha_scene)
 	pass # Replace with function body.
 
 

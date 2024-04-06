@@ -32,13 +32,13 @@ func _on_area_2d_body_exited(body):
 		#Ball going up screen
 		if position.y < -648:
 			CAMERA.position.y -= 648
-		if position.y < 0:
+		elif position.y < 0:
 			CAMERA.position.y -= 648
 			
 			
 		#ball moves downward
 		if position.y > 648:
 			pass
-		if position.y > 0:
+		elif position.y > 0:
 			CAMERA.position.y += 648
 	pass # Replace with function body.
