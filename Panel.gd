@@ -21,56 +21,39 @@ func _ready():
 func _on_button_pressed(index):
 	match index:
 		0: # New Game
-			start_new_game()
+			_on_new_game_pressed()
 		1: # Load Game
-			load_saved_game()
+			_on_load_game_pressed()
 		2: # Options
-			open_options_menu()
+			_on_options_pressed()
 		3: # Quit
-			quit_game()
+			_on_quit_pressed()
 		4: # Rules
-			display_game_rules()
+			_on_rules_pressed()
 		5: # Volume Toggle
-			toggle_volume()
+			_on_volume_toggle_pressed()
 
 # Start a new game
-func start_new_game():
-	# Add your code for starting a new game here
-	pass
 
-# Load a saved game
-func load_saved_game():
-	# Add your code for loading a saved game here
-	pass
+func _on_new_game_pressed():
+	pass # Replace with function body.
+	
 
-# Open options menu
-func open_options_menu():
-	# Add your code for opening options menu here
-	pass
-
-# Quit the game
-func quit_game():
-	# Add your code for quitting the game here
-	pass
-
-# Display game rules
-func display_game_rules():
-	# Add your code for displaying game rules here
-	pass
-
-# Toggle volume
-func toggle_volume():
-	# Add your code for toggling volume here
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	# Add your code for processing logic every frame here
-	pass
+func _on_load_game_pressed():
+	pass # Replace with function body.
 
 
+func _on_rules_pressed():
+	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_options_pressed():
+	pass # Replace with function body.
+
+
+func _on_quit_pressed():
+	pass # Replace with function body.
+
+
+func _on_volume_toggle_pressed():
+	pass # Replace with function body.

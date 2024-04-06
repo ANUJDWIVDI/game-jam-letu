@@ -58,3 +58,10 @@ offset_left = 31.0
 offset_top = 518.0
 offset_right = 101.0
 offset_bottom = 562.0
+
+[connection signal="pressed" from="Panel/New Game" to="Panel" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Panel/Load Game" to="Panel" method="_on_load_game_pressed"]
+[connection signal="pressed" from="Panel/Rules" to="Panel" method="_on_rules_pressed"]
+[connection signal="pressed" from="Panel/Options" to="Panel" method="_on_options_pressed"]
+[connection signal="pressed" from="Panel/Quit" to="Panel" method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/Volume Toggle" to="Panel" method="_on_volume_toggle_pressed"]
