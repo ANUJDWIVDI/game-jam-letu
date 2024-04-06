@@ -38,7 +38,7 @@ func _on_button_pressed(index):
 	
 # Start a new game
 func _on_new_game_pressed():
-    get_tree().change_scene("res://Pinball.tscn")
+	get_tree().change_scene("res://Pinball.tscn")
 
 
 # Load a game

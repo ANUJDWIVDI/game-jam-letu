@@ -1,34 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhhlbhfuio12v"]
+[gd_scene load_steps=2 format=3 uid="uid://dhhlbhfuio12v"]
 
-[sub_resource type="GDScript" id="GDScript_c71cy"]
-script/source = "extends RigidBody2D
-
-# Declare a variable to store the collision mask
-var panel_mask := 1
-
-func _ready():
-	# Set the collision mask to include panels
-	set_collision_mask_value(panel_mask, true)
-
-# Called when this body enters into contact with another
-func _on_RigidBody2D_body_entered(body: Node) -> void:
-	if body.is_in_group(\"panel\"):
-		# Handle collision with panel
-		# You can add your logic here
-		pass
-
-# Called when this body exits contact with another
-func _on_RigidBody2D_body_exited(body: Node) -> void:
-	if body.is_in_group(\"panel\"):
-		# Handle exiting collision with panel
-		# You can add your logic here
-		pass
-"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_c47v6"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3grkm"]
-size = Vector2(10, 10)
+[ext_resource type="PackedScene" uid="uid://ssjoe0p72efj" path="res://ball.tscn" id="1_dlhl5"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,12 +28,4 @@ offset_top = -601.0
 offset_right = 1196.0
 offset_bottom = -533.0
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(500, 250)
-script = SubResource("GDScript_c71cy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("CircleShape2D_c47v6")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-texture = SubResource("PlaceholderTexture2D_3grkm")
+[node name="RigidBody2D" parent="." instance=ExtResource("1_dlhl5")]
