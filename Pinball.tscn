@@ -1,31 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhhlbhfuio12v"]
+[gd_scene load_steps=4 format=3 uid="uid://dhhlbhfuio12v"]
 
 [ext_resource type="PackedScene" uid="uid://ssjoe0p72efj" path="res://ball.tscn" id="1_dlhl5"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
+size = Vector2(100, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmi7m"]
+size = Vector2(100, 600)
+
 [node name="Node2D" type="Node2D"]
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = -22.0
-offset_top = 557.0
-offset_right = 1169.0
-offset_bottom = 666.0
-
-[node name="Panel" type="Panel" parent="Panel"]
-offset_top = -619.0
-offset_right = 100.0
-offset_bottom = 100.0
-
-[node name="Panel2" type="Panel" parent="Panel"]
-offset_left = 1116.0
-offset_top = -628.0
-offset_right = 1216.0
-offset_bottom = 91.0
-
-[node name="Panel3" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = -601.0
-offset_right = 1196.0
-offset_bottom = -533.0
-
 [node name="RigidBody2D" parent="." instance=ExtResource("1_dlhl5")]
+position = Vector2(241, 148)
+
+[node name="Wall2" type="Sprite2D" parent="."]
+position = Vector2(1144, 293)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(38, 294)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall3" type="Sprite2D" parent="."]
+position = Vector2(877, 501)
+rotation = 0.944086
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall4" type="Sprite2D" parent="."]
+position = Vector2(241, 457)
+rotation = 2.31254
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
