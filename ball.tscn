@@ -1,23 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ssjoe0p72efj"]
 
-[sub_resource type="GDScript" id="GDScript_xnrq7"]
-script/source = "extends RigidBody2D
-
-func _ready():
-	# Connect the body_entered signal to self
-	#connect(\"body_entered\", self, \"_on_body_entered\")
-	pass
-
-func _on_body_entered(body):
-	# Check if the colliding body is a panel
-	if body.is_in_group(\"panel\"):
-		# Calculate the bounce direction
-		var normal = get_collision_normal()
-		var velocity = get_linear_velocity()
-		var new_velocity = velocity.bounce(normal)
-		# Apply the new velocity
-		set_linear_velocity(new_velocity)
-"
+[ext_resource type="Script" path="res://ball.gd" id="1_1a2fx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbyhy"]
 
@@ -26,7 +9,7 @@ size = Vector2(10, 10)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 position = Vector2(500, 250)
-script = SubResource("GDScript_xnrq7")
+script = ExtResource("1_1a2fx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xbyhy")
