@@ -21,14 +21,10 @@ func _on_area_2d_body_entered(body):
 
 func _on_area_2d_body_exited(body):
 	if body.name == "Ball":
-		print(global_position)
-		print(body.global_position)
 		# Calculate the direction of the collision
 		var collision_direction = (body.global_position - global_position).normalized()
-		print(collision_direction)
 
 		# Calculate the force of the collision
 		var collision_force = body.linear_velocity.length()
-		print(collision_force)
 		
 		body.apply_impulse(velocity, collision_direction * collision_force * 120)

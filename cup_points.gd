@@ -16,12 +16,12 @@ func _process(delta):
 
 # Function to be called when the ball interacts with the cup
 func on_ball_in_cup():
-	points += 1
+	StartVars.points += 1
 
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Ball":
 		on_ball_in_cup()
 		body.reset_ball()
-		print(body)
+		print(StartVars.points)
 	pass # Replace with function body.

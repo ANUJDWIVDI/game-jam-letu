@@ -6,10 +6,12 @@ var gacha_scene = "res://gacha_system.tscn"
 
 
 func _ready():
+	$CanvasLayer/Button.visible = false
 	$PincoinSky.visible = true
 	animplay.play("start_anim")
 	await animplay.animation_finished
 	$PincoinSky.visible = false
+	$CanvasLayer/Button.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +20,7 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	$CanvasLayer/Button.visible = false
 	$OutroPanel.visible = true
 	animplay.play("leave_anim")
 	await animplay.animation_finished

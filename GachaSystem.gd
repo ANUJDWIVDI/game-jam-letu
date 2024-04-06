@@ -7,6 +7,7 @@ func _ready():
 	$Panel2.visible = false
 	animplay.play("start_anim")
 	await animplay.animation_finished
+	$Points/Label.text = "Your points: " + str(StartVars.points)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
