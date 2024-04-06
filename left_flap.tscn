@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://left_flap.gd" id="1_g4oec"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u0t33"]
-size = Vector2(20, 100)
+size = Vector2(20, 150)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqr0s"]
-size = Vector2(20, 100)
+size = Vector2(20, 150)
 
 [node name="left_flap" type="Sprite2D"]
 texture = SubResource("PlaceholderTexture2D_u0t33")

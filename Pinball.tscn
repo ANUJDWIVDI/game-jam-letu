@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=9 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
 [ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
+[ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
@@ -81,6 +82,16 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
+[node name="Wall7" type="Sprite2D" parent="."]
+position = Vector2(413, -214)
+rotation = 1.27916
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall7/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
 [node name="wallish" type="Sprite2D" parent="."]
 position = Vector2(1046, 54)
 texture = SubResource("PlaceholderTexture2D_oq142")
@@ -93,3 +104,7 @@ shape = SubResource("CircleShape2D_qaeic")
 [node name="left_flap" parent="." instance=ExtResource("3_efef1")]
 position = Vector2(482, 628)
 rotation = -0.874705
+
+[node name="right_flap" parent="." instance=ExtResource("4_76wbq")]
+position = Vector2(631, 631)
+rotation = 0.958614
