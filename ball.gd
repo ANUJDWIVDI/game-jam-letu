@@ -11,7 +11,7 @@ func _ready():
 	print("happened")
 	BALL = preload("res://ball.tscn").instantiate()
 	position = initial_position
-	physics_material.bounce = .01
+	physics_material.bounce = 2.0
 	self.physics_material_override = physics_material
 
 func _physics_process(delta):

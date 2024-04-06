@@ -8,11 +8,14 @@
 size = Vector2(10, 10)
 
 [node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(500, 250)
 mass = 0.25
 script = ExtResource("1_1a2fx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xbyhy")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_v5umh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
