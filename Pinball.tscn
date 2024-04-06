@@ -50,6 +50,3 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
-
-[node name="Spring" type="DampedSpringJoint2D" parent="."]
-position = Vector2(100, 500)
