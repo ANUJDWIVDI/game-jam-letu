@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bg8nxnkcbyt48"]
+[gd_scene load_steps=11 format=3 uid="uid://bg8nxnkcbyt48"]
 
 [ext_resource type="Script" path="res://GachaSystem.gd" id="1_yxtxl"]
 [ext_resource type="Texture2D" uid="uid://dd7f08gm2p53p" path="res://Sprites/Gacha/people/old_man_beach.png" id="2_jeul1"]
+[ext_resource type="Texture2D" uid="uid://b5b1wnrisv2d0" path="res://Sprites/Menus/applestar.png" id="3_h0whw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hjxn"]
 bg_color = Color(0.14902, 0.14902, 0.14902, 1)
@@ -198,6 +199,237 @@ tracks/16/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Stars/Applestar7:position:x")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-53, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Stars/Applestar7:position:y")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(514, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Stars/Applestar7:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Stars/Applestar:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Stars/Applestar:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-158, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Stars/Applestar:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(720, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Stars/Applestar2:position:x")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-257, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Stars/Applestar2:position:y")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(455, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Stars/Applestar2:rotation")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/26/type = "bezier"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Stars/Applestar3:position:x")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(130, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/27/type = "bezier"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Stars/Applestar3:position:y")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(831, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/28/type = "bezier"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Stars/Applestar3:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/29/type = "bezier"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Stars/Applestar4:position:x")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-497, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/30/type = "bezier"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Stars/Applestar4:position:y")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(687, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/31/type = "bezier"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Stars/Applestar4:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/32/type = "bezier"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Stars/Applestar5:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/33/type = "bezier"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Stars/Applestar5:position:x")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-164, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/34/type = "bezier"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Stars/Applestar5:position:y")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1024, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/35/type = "bezier"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Stars/Applestar6:rotation")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/36/type = "bezier"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Stars/Applestar6:position:x")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-489, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/37/type = "bezier"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Stars/Applestar6:position:y")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(933, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_iipnq"]
@@ -397,9 +629,245 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0, 1)
 }
 
+[sub_resource type="Animation" id="Animation_d4yk5"]
+resource_name = "Stars_anim"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stars/Applestar7:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-53, -0.25, 0, 0.25, 0, 627, -0.25, 0, 0.25, 0, 1165, -0.25, 0, 0.25, 0, 1360, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stars/Applestar7:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(514, -0.25, 0, 0.25, 0, 294, -0.25, 0, 0.25, 0, 20.0001, -0.25, 0, 0.25, 0, -46, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stars/Applestar7:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -3.18523, -0.25, 0, 0.25, 0, -6.0179, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Stars/Applestar:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-1.59349, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.708604, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -1.76976, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.1, 1.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Stars/Applestar:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-158, -0.25, 0, 0.25, 0, 389, -0.25, 0, 0.25, 0, 582, -0.25, 0, 0.25, 0, 885, -0.25, 0, 0.25, 0, 1504, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.1, 1.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Stars/Applestar:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(720, -0.25, 0, 0.25, 0, 309, -0.25, 0, 0.25, 0, 303, -0.25, 0, 0.25, 0, 358, -0.25, 0, 0.25, 0, 131, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.1, 1.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Stars/Applestar2:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-257, -0.25, 0, 0.25, 0, 421, -0.25, 0, 0.25, 0, 1169, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Stars/Applestar2:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(455, -0.25, 0, 0.25, 0, 94.9999, -0.25, 0, 0.25, 0, 688, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Stars/Applestar2:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.30034, -0.25, 0, 0.25, 0, 1.41721, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Stars/Applestar3:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(130, -0.25, 0, 0.25, 0, 1001, -0.25, 0, 0.25, 0, 412, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Stars/Applestar3:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(831, -0.25, 0, 0.25, 0, 551, -0.25, 0, 0.25, 0, -121, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Stars/Applestar3:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.30034, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7, 1.5)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Stars/Applestar4:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-497, -0.25, 0, 0.25, 0, 507, -0.25, 0, 0.25, 0, -116, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Stars/Applestar4:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(687, -0.25, 0, 0.25, 0, 560, -0.25, 0, 0.25, 0, 117, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Stars/Applestar4:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.94604, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Stars/Applestar5:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2.47837, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Stars/Applestar5:position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-164, -0.25, 0, 0.25, 0, 285, -0.25, 0, 0.25, 0, 539, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Stars/Applestar5:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1024, -0.25, 0, 0.25, 0, 248, -0.25, 0, 0.25, 0, 846, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Stars/Applestar6:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2.12407, -0.25, 0, 0.25, 0, 2.12407, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Stars/Applestar6:position:x")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-489, -0.25, 0, 0.25, 0, 971, -0.25, 0, 0.25, 0, 441, -0.25, 0, 0.25, 0, -193, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Stars/Applestar6:position:y")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(933, -0.25, 0, 0.25, 0, 153, -0.25, 0, 0.25, 0, 132, -0.25, 0, 0.25, 0, 776, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u706l"]
 _data = {
 "RESET": SubResource("Animation_0y7g8"),
+"Stars_anim": SubResource("Animation_d4yk5"),
 "leave_anim": SubResource("Animation_iipnq"),
 "start_anim": SubResource("Animation_eo1vs")
 }
@@ -494,7 +962,6 @@ libraries = {
 }
 
 [node name="Panel2" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 657.0
@@ -504,6 +971,44 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_np1pa")
 position = Vector2(712, 254)
 scale = Vector2(0.368787, 0.368787)
 texture = ExtResource("2_jeul1")
+
+[node name="Stars" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.521569)
+
+[node name="Applestar" type="Sprite2D" parent="Stars"]
+position = Vector2(-158, 720)
+scale = Vector2(0.337333, 0.337333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar2" type="Sprite2D" parent="Stars"]
+position = Vector2(-257, 455)
+scale = Vector2(0.0958333, 0.0958333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar3" type="Sprite2D" parent="Stars"]
+position = Vector2(130, 831)
+scale = Vector2(0.0958333, 0.0958333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar4" type="Sprite2D" parent="Stars"]
+position = Vector2(-497, 687)
+scale = Vector2(0.0958333, 0.0958333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar5" type="Sprite2D" parent="Stars"]
+position = Vector2(-164, 1024)
+scale = Vector2(0.0958333, 0.0958333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar6" type="Sprite2D" parent="Stars"]
+position = Vector2(-489, 933)
+scale = Vector2(0.0958333, 0.0958333)
+texture = ExtResource("3_h0whw")
+
+[node name="Applestar7" type="Sprite2D" parent="Stars"]
+position = Vector2(-53, 514)
+scale = Vector2(0.133583, 0.129917)
+texture = ExtResource("3_h0whw")
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SummonButton" to="." method="_on_summon_button_pressed"]

@@ -27,4 +27,8 @@ func _on_button_pressed():
 func _on_summon_button_pressed():
 	# Prints a random integer between -10 and 10.
 	var sumcharacter = random.randi_range(0, 6)
+	$Panel2.visible = true
 	$Character.texture = StartVars.old_men[sumcharacter][0]
+	animplay.play("Stars_anim")
+	await animplay.animation_finished
+	$Panel2.visible = false
