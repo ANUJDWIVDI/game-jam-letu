@@ -1,8 +1,8 @@
-<<<<<<< Updated upstream
+
 [gd_scene load_steps=5 format=3 uid="uid://jev60wse2gus"]
-=======
+
 [gd_scene load_steps=7 format=3 uid="uid://dhhlbhfuio12v"]
->>>>>>> Stashed changes
+
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
