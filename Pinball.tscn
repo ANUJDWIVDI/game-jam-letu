@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://jev60wse2gus"]
+[gd_scene load_steps=29 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="Script" path="res://Pinball.gd" id="1_afafi"]
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
 [ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
 [ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
-[ext_resource type="PackedScene" uid="uid://bpa8dgo5qsvbc" path="res://bumpers.tscn" id="6_fucih"]
-[ext_resource type="PackedScene" path="res://cup_points.tscn" id="7_26g4x"]
-[ext_resource type="PackedScene" path="res://wall.tscn" id="8_wwk88"]
+[ext_resource type="PackedScene" uid="uid://chlaj0xpttppg" path="res://bumpers.tscn" id="6_fucih"]
+[ext_resource type="PackedScene" uid="uid://dp5v3tcueq3um" path="res://cup_points.tscn" id="7_26g4x"]
+[ext_resource type="PackedScene" uid="uid://cbpfvq63v63bc" path="res://wall.tscn" id="8_wwk88"]
 [ext_resource type="Texture2D" uid="uid://174pblxmeli2" path="res://Sprites/Menus/pincoin_sky.png" id="10_6eyfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8xx"]

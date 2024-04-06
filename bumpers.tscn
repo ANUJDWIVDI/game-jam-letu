@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpa8dgo5qsvbc"]
+[gd_scene load_steps=5 format=3 uid="uid://chlaj0xpttppg"]
 
 [ext_resource type="Texture2D" uid="uid://c382c1cdxyway" path="res://Sprites/Pinball/melonseed1.png" id="1_2audy"]
 [ext_resource type="Script" path="res://bumpers.gd" id="1_qqisp"]

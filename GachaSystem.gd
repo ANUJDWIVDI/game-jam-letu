@@ -3,7 +3,10 @@ extends Control
 var packed_scene = "res://Menu.tscn"
 @onready var animplay = $AnimationPlayer
 
+var random = RandomNumberGenerator.new()
+
 func _ready():
+	random.randomize()
 	$Panel2.visible = false
 	animplay.play("start_anim")
 	await animplay.animation_finished
@@ -19,3 +22,9 @@ func _on_button_pressed():
 	animplay.play("leave_anim")
 	await animplay.animation_finished
 	get_tree().change_scene_to_file(packed_scene)
+
+
+func _on_summon_button_pressed():
+	# Prints a random integer between -10 and 10.
+	var sumcharacter = random.randi_range(0, 6)
+	$Character.texture = StartVars.old_men[sumcharacter][0]
