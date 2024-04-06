@@ -9,23 +9,23 @@ var BALL
 
 
 func _ready():
-	position = initial_position
+	#position = initial_position
 	physics_material.bounce = 2.0
 	self.physics_material_override = physics_material
 
 func _physics_process(delta):
 	if position.y > 800:
-		CAMERA.position.y = 0
-		apply_impulse(Vector2.ZERO, Vector2.ZERO)
-		PhysicsServer2D.body_set_state(
+		reset_ball()
+		
+		
+func reset_ball():
+	CAMERA.position.y = 0
+	apply_impulse(Vector2.ZERO, Vector2.ZERO)
+	PhysicsServer2D.body_set_state(
 	get_rid(),
 	PhysicsServer2D.BODY_STATE_TRANSFORM,
 	Transform2D.IDENTITY.translated(initial_position)
 )
-
-func _on_area_2d_body_entered(body):
-	#print("happened")
-	pass
 
 func _on_area_2d_body_exited(body):
 	if body == self:

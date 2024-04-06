@@ -7,8 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_aw2rw"]
 radius = 0.7
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xp382"]
-radius = 0.8
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxc4y"]
+radius = 0.71
 
 [node name="Bumpers" type="Sprite2D"]
 rotation = 0.785398
@@ -16,15 +16,16 @@ scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_e2451")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(1, 1)
 script = ExtResource("1_qqisp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_aw2rw")
 
 [node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_xp382")
+shape = SubResource("CircleShape2D_cxc4y")
 
-[connection signal="area_shape_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_area_shape_entered"]
-[connection signal="body_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_exited"]

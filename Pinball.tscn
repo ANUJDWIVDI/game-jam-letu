@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=16 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
 [ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
 [ext_resource type="PackedScene" uid="uid://chlaj0xpttppg" path="res://bumpers.tscn" id="6_fucih"]
+[ext_resource type="PackedScene" uid="uid://dp5v3tcueq3um" path="res://cup_points.tscn" id="7_26g4x"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
@@ -23,12 +24,18 @@ radius = 50.0
 size = Vector2(1000, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uct1c"]
-size = Vector2(1175, 666)
+size = Vector2(1161, 651)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a73ol"]
+size = Vector2(400, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ww71p"]
+size = Vector2(400, 40)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Ball" parent="." node_paths=PackedStringArray("CAMERA") instance=ExtResource("1_dlhl5")]
-position = Vector2(1113, 235)
+position = Vector2(1115, 171)
 CAMERA = NodePath("../Camera2D")
 
 [node name="Wall2" type="Sprite2D" parent="."]
@@ -81,24 +88,24 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
-[node name="Wall6" type="Sprite2D" parent="."]
-position = Vector2(975, -511)
-rotation = 1.88321
+[node name="WallTopR" type="Sprite2D" parent="."]
+position = Vector2(840, -1928)
+rotation = 1.61456
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
+[node name="StaticBody2D" type="StaticBody2D" parent="WallTopR"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTopR/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
-[node name="Wall7" type="Sprite2D" parent="."]
-position = Vector2(389, -515)
+[node name="WallTopL" type="Sprite2D" parent="."]
+position = Vector2(274, -1898)
 rotation = 1.27916
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Wall7"]
+[node name="StaticBody2D" type="StaticBody2D" parent="WallTopL"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall7/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTopL/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
 [node name="wallish" type="Sprite2D" parent="."]
@@ -147,12 +154,12 @@ anchor_mode = 0
 [node name="Area2D" type="Area2D" parent="Camera2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Area2D"]
-position = Vector2(577.5, 323)
+position = Vector2(570.5, 323.5)
 shape = SubResource("RectangleShape2D_uct1c")
 
 [node name="Bumpers" parent="." instance=ExtResource("6_fucih")]
-position = Vector2(695, 303)
-scale = Vector2(342.331, 87.6911)
+position = Vector2(718, 417)
+scale = Vector2(86.4376, 80.5639)
 
 [node name="Bumpers2" parent="." instance=ExtResource("6_fucih")]
 position = Vector2(448, -168)
@@ -165,6 +172,128 @@ position = Vector2(665, -360)
 
 [node name="Bumpers5" parent="." instance=ExtResource("6_fucih")]
 position = Vector2(851, -201)
+
+[node name="Bumpers6" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(293, 260)
+rotation = -0.00644797
+scale = Vector2(84.5991, 80.5639)
+
+[node name="Wall8" type="Sprite2D" parent="."]
+position = Vector2(-26, -295)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall8/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall9" type="Sprite2D" parent="."]
+position = Vector2(1182, -391)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall9/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall10" type="Sprite2D" parent="."]
+position = Vector2(1208, -73)
+rotation = 2.4172
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall10/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall11" type="Sprite2D" parent="."]
+position = Vector2(-26, -888)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall11/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall12" type="Sprite2D" parent="."]
+position = Vector2(1182, -984)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall12/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall13" type="Sprite2D" parent="."]
+position = Vector2(-26, -1469)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall13/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall14" type="Sprite2D" parent="."]
+position = Vector2(1182, -1581)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall14/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Bumpers7" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(663, -137)
+
+[node name="Bumpers8" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(287, -355)
+
+[node name="Bumpers9" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(745, 193)
+
+[node name="Bumpers10" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(475, 165)
+
+[node name="Bumpers11" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(1094, -325)
+scale = Vector2(86.4376, 80.5639)
+
+[node name="Bumpers12" parent="." instance=ExtResource("6_fucih")]
+position = Vector2(138, -481)
+scale = Vector2(86.4376, 80.5639)
+
+[node name="cup_points" parent="." instance=ExtResource("7_26g4x")]
+position = Vector2(43, 17)
+rotation = 0.525466
+scale = Vector2(65.0366, 31.2591)
+
+[node name="Wall6" type="Sprite2D" parent="."]
+position = Vector2(1216, -676)
+rotation = 1.06494
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="right_flap2" parent="." instance=ExtResource("4_76wbq")]
+position = Vector2(932, -557)
+rotation = 0.958614
+
+[node name="swall" type="Sprite2D" parent="."]
+position = Vector2(521, -615)
+rotation = 0.408035
+texture = SubResource("PlaceholderTexture2D_a73ol")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="swall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swall/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ww71p")
+
+[node name="left_flap2" parent="." instance=ExtResource("3_efef1")]
+position = Vector2(697, -528)
+rotation = -0.874705
 
 [connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Camera2D/Area2D" to="Ball" method="_on_area_2d_body_exited"]
