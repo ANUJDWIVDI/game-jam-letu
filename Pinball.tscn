@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://jev60wse2gus"]
+[gd_scene load_steps=5 format=3 uid="uid://dhhlbhfuio12v"]
 
-[ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
+[ext_resource type="PackedScene" uid="uid://ssjoe0p72efj" path="res://ball.tscn" id="1_dlhl5"]
+[ext_resource type="PackedScene" uid="uid://dn5xqm2jdn1cx" path="res://spring_scene.tscn" id="2_iul81"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oa8di"]
 size = Vector2(100, 600)
@@ -10,11 +11,11 @@ size = Vector2(100, 600)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="RigidBody2D" parent="." instance=ExtResource("1_dlhl5")]
-position = Vector2(241, 148)
+[node name="Ball" parent="." instance=ExtResource("1_dlhl5")]
+position = Vector2(1113, 258)
 
 [node name="Wall2" type="Sprite2D" parent="."]
-position = Vector2(1144, 293)
+position = Vector2(1047, 350)
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall2"]
@@ -49,4 +50,25 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Spring" parent="." instance=ExtResource("2_iul81")]
+position = Vector2(1114, 305)
+
+[node name="Wall5" type="Sprite2D" parent="."]
+position = Vector2(1179, 350)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall6" type="Sprite2D" parent="."]
+position = Vector2(500, 307)
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
