@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=29 format=3 uid="uid://jev60wse2gus"]
 
 [ext_resource type="Script" path="res://Pinball.gd" id="1_afafi"]
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://4kxn12snvix4" path="res://left_flap.tscn" id="3_efef1"]
 [ext_resource type="PackedScene" uid="uid://bgqfadtbgqkdr" path="res://right_flap.tscn" id="4_76wbq"]
 [ext_resource type="PackedScene" uid="uid://c1jgpkwwv5php" path="res://Obstacle.tscn" id="5_0aim7"]
-[ext_resource type="PackedScene" uid="uid://chlaj0xpttppg" path="res://bumpers.tscn" id="6_fucih"]
-[ext_resource type="PackedScene" uid="uid://dp5v3tcueq3um" path="res://cup_points.tscn" id="7_26g4x"]
-[ext_resource type="PackedScene" uid="uid://cbpfvq63v63bc" path="res://wall.tscn" id="8_wwk88"]
+[ext_resource type="PackedScene" uid="uid://bpa8dgo5qsvbc" path="res://bumpers.tscn" id="6_fucih"]
+[ext_resource type="PackedScene" path="res://cup_points.tscn" id="7_26g4x"]
+[ext_resource type="PackedScene" path="res://wall.tscn" id="8_wwk88"]
 [ext_resource type="Texture2D" uid="uid://174pblxmeli2" path="res://Sprites/Menus/pincoin_sky.png" id="10_6eyfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8xx"]
@@ -38,76 +38,6 @@ radius = 50.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdb3u"]
 bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="Animation" id="Animation_lwjau"]
-resource_name = "start_anim"
-length = 5.0
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PincoinSky:modulate:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5, 5)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PincoinSky:modulate:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2.5, 5)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PincoinSky:modulate:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2.5, 5)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("PincoinSky:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2.5, 5)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("PincoinSky:position:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(190, -0.25, 0, 0.25, 0, 400, -0.25, 0, 0.25, 0, 841, -0.25, 0, 0.25, 0, 1176, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 4, 5)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("PincoinSky:position:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(555, -0.25, 0, 0.25, 0, 349, -0.25, 0, 0.25, 0, 355, -0.25, 0, 0.25, 0, 626, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 4, 5)
-}
 
 [sub_resource type="Animation" id="Animation_t8xe2"]
 length = 0.001
@@ -311,6 +241,76 @@ tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(596, -0.25, 0, 0.25, 0, 846, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_lwjau"]
+resource_name = "start_anim"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PincoinSky:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PincoinSky:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PincoinSky:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PincoinSky:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PincoinSky:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(190, -0.25, 0, 0.25, 0, 400, -0.25, 0, 0.25, 0, 841, -0.25, 0, 0.25, 0, 1176, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 4, 5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PincoinSky:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(555, -0.25, 0, 0.25, 0, 349, -0.25, 0, 0.25, 0, 355, -0.25, 0, 0.25, 0, 626, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 4, 5)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4kqpq"]
@@ -527,7 +527,6 @@ shape = SubResource("RectangleShape2D_vmi7m")
 [node name="WallTopR" type="Sprite2D" parent="Wallholder"]
 position = Vector2(840, -1928)
 rotation = 1.61456
-scale = Vector2(1, 1)
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wallholder/WallTopR"]
@@ -621,7 +620,6 @@ shape = SubResource("RectangleShape2D_vmi7m")
 [node name="Wall6" type="Sprite2D" parent="Wallholder"]
 position = Vector2(1216, -676)
 rotation = 1.06494
-scale = Vector2(1, 1)
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wallholder/Wall6"]

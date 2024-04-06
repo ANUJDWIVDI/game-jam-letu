@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://chlaj0xpttppg"]
+[gd_scene load_steps=5 format=3 uid="uid://bpa8dgo5qsvbc"]
 
 [ext_resource type="Texture2D" uid="uid://c382c1cdxyway" path="res://Sprites/Pinball/melonseed1.png" id="1_2audy"]
 [ext_resource type="Script" path="res://bumpers.gd" id="1_qqisp"]
@@ -14,7 +14,6 @@ scale = Vector2(0.025, 0.025)
 texture = ExtResource("1_2audy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-scale = Vector2(1, 1)
 script = ExtResource("1_qqisp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -23,7 +22,6 @@ scale = Vector2(700, 700)
 shape = SubResource("CircleShape2D_aw2rw")
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-91, -320)

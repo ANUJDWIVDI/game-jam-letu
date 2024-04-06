@@ -4,12 +4,16 @@ extends Node2D
 var start_angle = deg_to_rad(120)
 var end_angle = deg_to_rad(35)
 
+
+var physics_material = PhysicsMaterial.new()
 # Define the rotation speed
 var rotation_speed = 15.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+	# Set the bounce property of the physics material
+	physics_material.bounce = 100.0
+	self.physics_material_override = physics_material
 	# Set the initial rotation
 	#rotation = start_angle
 	pass
