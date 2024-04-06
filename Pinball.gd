@@ -18,6 +18,9 @@ func _ready():
 func _process(delta):
 	pass
 
+func update_score():
+	$CanvasLayer/Points/Label.text = "Score:
+		" + str(StartVars.points)
 
 func _on_button_pressed():
 	$CanvasLayer/Button.visible = false

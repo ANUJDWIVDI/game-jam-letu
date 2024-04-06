@@ -26,6 +26,7 @@ func _physics_process(delta):
 		
 		
 func reset_ball():
+	get_parent().update_score()
 	CAMERA.position.y = 0
 	linear_velocity = Vector2(0,0)
 	apply_impulse(Vector2.ZERO, Vector2.ZERO)

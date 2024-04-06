@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://54togc8abo12"]
+[gd_scene load_steps=29 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="Script" path="res://Pinball.gd" id="1_afafi"]
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
@@ -243,28 +243,6 @@ tracks/11/keys = {
 "points": PackedFloat32Array(596, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-tracks/12/type = "bezier"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("OutroPanel:position:x")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-588, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/13/type = "bezier"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("OutroPanel:position:y")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
 
 [sub_resource type="Animation" id="Animation_oi40y"]
 resource_name = "leave_anim"
@@ -334,28 +312,6 @@ tracks/5/keys = {
 "points": PackedFloat32Array(596, -0.25, 0, 0.25, 0, 846, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("OutroPanel:position:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-588, -0.25, 0, 0.25, 0, -382, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("OutroPanel:position:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(223, -0.25, 0, 0.25, 0, -41, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4kqpq"]
 _data = {
@@ -380,6 +336,18 @@ corner_radius_bottom_left = 5
 bg_color = Color(0.945098, 0.305882, 0.745098, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r7xo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_460tf"]
+bg_color = Color(0.921569, 0.376471, 0.639216, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.933333, 0.741176, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_afafi")
@@ -753,10 +721,10 @@ texture = ExtResource("10_6eyfj")
 
 [node name="OutroPanel" type="Panel" parent="."]
 visible = false
-offset_left = -588.0
-offset_top = 223.0
-offset_right = 6.0
-offset_bottom = 819.0
+offset_left = -23.0
+offset_top = -32.0
+offset_right = 571.0
+offset_bottom = 564.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_wdb3u")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -765,7 +733,6 @@ libraries = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 1027.0
@@ -776,6 +743,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_1p057")
 theme_override_styles/hover = SubResource("StyleBoxFlat_athly")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8r7xo")
 text = "STOP"
+
+[node name="Points" type="Panel" parent="CanvasLayer"]
+offset_left = 1027.0
+offset_top = 483.0
+offset_right = 1120.0
+offset_bottom = 548.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_460tf")
+
+[node name="Label" type="Label" parent="CanvasLayer/Points"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 2.0
+offset_right = 173.0
+offset_bottom = 54.0
+text = "Score:
+ "
 
 [connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Camera2D/Area2D" to="Ball" method="_on_area_2d_body_exited"]
