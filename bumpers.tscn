@@ -1,19 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpa8dgo5qsvbc"]
+[gd_scene load_steps=5 format=3 uid="uid://chlaj0xpttppg"]
 
 [ext_resource type="Script" path="res://bumpers.gd" id="1_qqisp"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e2451"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aw2rw"]
-radius = 0.845813
+radius = 0.7
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xp382"]
+radius = 0.8
 
 [node name="Bumpers" type="Sprite2D"]
-position = Vector2(0.75, 12)
-scale = Vector2(25, 20)
+rotation = 0.785398
+scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_e2451")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 script = ExtResource("1_qqisp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_aw2rw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xp382")
+
+[connection signal="area_shape_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]
