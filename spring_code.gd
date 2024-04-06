@@ -9,9 +9,9 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_up"):
-		press_start_time = OS.get_ticks_msec()
+		press_start_time = Time.get_ticks_msec()
 	elif Input.is_action_just_released("ui_up"):
-		var press_duration = (OS.get_ticks_msec() - press_start_time) / 1000.0
+		var press_duration = (Time.get_ticks_msec() - press_start_time) / 1000.0
 		var spring_force = calculate_spring_force(press_duration)
 		get_node("../Ball").apply_central_impulse(Vector2(0, -spring_force))
 
