@@ -1,6 +1,6 @@
 extends Node2D
 
-var spring_strength = 1000.0
+var spring_strength = 4000.0
 var rest_length = 0.0
 var press_start_time = 0.0
 

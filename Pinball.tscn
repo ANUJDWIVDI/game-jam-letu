@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://jev60wse2gus"]
+=======
+[gd_scene load_steps=7 format=3 uid="uid://dhhlbhfuio12v"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
@@ -8,6 +12,13 @@ size = Vector2(100, 600)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmi7m"]
 size = Vector2(100, 600)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yxvvc"]
+size = Vector2(100, 50)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y3dul"]
+radius = 50.0
+height = 100.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -64,11 +75,31 @@ texture = SubResource("PlaceholderTexture2D_oa8di")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
 
+[node name="wallish" type="Sprite2D" parent="."]
+position = Vector2(1047, 55)
+texture = SubResource("PlaceholderTexture2D_yxvvc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="wallish"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallish/StaticBody2D"]
+shape = SubResource("CapsuleShape2D_y3dul")
+
 [node name="Wall6" type="Sprite2D" parent="."]
-position = Vector2(722, 216)
+position = Vector2(1147, -41)
+rotation = -0.39244
 texture = SubResource("PlaceholderTexture2D_oa8di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Wall6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D"]
+shape = SubResource("RectangleShape2D_vmi7m")
+
+[node name="Wall7" type="Sprite2D" parent="."]
+position = Vector2(760, -220)
+rotation = -1.70342
+texture = SubResource("PlaceholderTexture2D_oa8di")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Wall7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall7/StaticBody2D"]
 shape = SubResource("RectangleShape2D_vmi7m")
