@@ -14,6 +14,7 @@ func _process(delta):
 		var press_duration = (Time.get_ticks_msec() - press_start_time) / 1000.0
 		var spring_force = calculate_spring_force(press_duration)
 		get_node("../Ball").apply_central_impulse(Vector2(0, -spring_force))
+		
 
 func calculate_spring_force(press_duration):
 	if press_duration < 2.0:

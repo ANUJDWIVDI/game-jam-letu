@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jev60wse2gus"]
+[gd_scene load_steps=10 format=3 uid="uid://54togc8abo12"]
 
 [ext_resource type="PackedScene" uid="uid://dwr6okfmqcs11" path="res://ball.tscn" id="1_dlhl5"]
 [ext_resource type="PackedScene" uid="uid://b1kt7y5rs2d26" path="res://spring_scene.tscn" id="2_iul81"]
@@ -16,6 +16,9 @@ size = Vector2(100, 50)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qaeic"]
 radius = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8xx"]
+size = Vector2(1000, 50)
 
 [node name="Node2D" type="Node2D"]
 
@@ -108,3 +111,11 @@ rotation = -0.874705
 [node name="right_flap" parent="." instance=ExtResource("4_76wbq")]
 position = Vector2(631, 631)
 rotation = 0.958614
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(545, 755)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wa8xx")
+
+[connection signal="body_entered" from="Area2D" to="Ball" method="_on_area_2d_body_entered"]
